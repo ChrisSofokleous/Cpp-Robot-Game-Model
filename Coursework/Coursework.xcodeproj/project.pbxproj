@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8333C109219C8CD700F15D3C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8333C108219C8CD700F15D3C /* main.cpp */; };
+		8333C111219C8D3A00F15D3C /* robot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8333C10F219C8D3A00F15D3C /* robot.cpp */; };
+		8333C114219C8D4000F15D3C /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8333C112219C8D4000F15D3C /* game.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		8333C105219C8CD700F15D3C /* Coursework */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Coursework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8333C108219C8CD700F15D3C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8333C10F219C8D3A00F15D3C /* robot.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = robot.cpp; sourceTree = "<group>"; };
+		8333C110219C8D3A00F15D3C /* robot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = robot.h; sourceTree = "<group>"; };
+		8333C112219C8D4000F15D3C /* game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
+		8333C113219C8D4000F15D3C /* game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = game.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				8333C108219C8CD700F15D3C /* main.cpp */,
+				8333C10F219C8D3A00F15D3C /* robot.cpp */,
+				8333C110219C8D3A00F15D3C /* robot.h */,
+				8333C112219C8D4000F15D3C /* game.cpp */,
+				8333C113219C8D4000F15D3C /* game.h */,
 			);
 			path = Coursework;
 			sourceTree = "<group>";
@@ -118,7 +128,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8333C111219C8D3A00F15D3C /* robot.cpp in Sources */,
 				8333C109219C8CD700F15D3C /* main.cpp in Sources */,
+				8333C114219C8D4000F15D3C /* game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
