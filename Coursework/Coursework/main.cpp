@@ -7,5 +7,26 @@
 //
 
 #include <iostream>
+#include "robot.h"
+
+using namespace std;
+
+int main() {
+    robot r("Dave");
+    
+    r.move_north();
+    r.move_north();
+    r.move_north();
+    r.move_east();
+    r.move_south();
+    
+    cout << "Name: " << r.name() << "\n";
+    cout << "N: " << r.north() << "\n";
+    cout << "E: " << r.east() << "\n";
+    cout << "Trav: " << r.travelled() << "\n";
+    cout << "Dist: " << distance(r) << "\n";
+    
+    return 0;
+}
 
 

@@ -20,7 +20,7 @@ public:
     void move_south();
     void move_east();
     void move_west();
-    const std::string &name() const;
+    const std::string &name() const {return n;} ;
     int north() const;
     int east() const;
     int travelled() const;
@@ -29,3 +29,4 @@ public:
 int distance(const robot &r);
 
 #endif /* robot_h */
+

@@ -8,6 +8,7 @@
 
 #include "robot.h"
 #include <string>
+#include <cstdlib>
 
 using namespace std;
 
@@ -19,7 +20,8 @@ int posY = originY;
 
 int travelledDist = 0;
 
-robot::robot(const string &n) : n(n){}
+robot::robot(const string &n) : n(n) {
+};
 
 void robot::move_north(){
     posY++;
