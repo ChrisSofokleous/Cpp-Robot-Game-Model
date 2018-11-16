@@ -10,28 +10,24 @@
 #define game_h
 #include <string>
 #include <vector>
-#include <algorithm>
 #include "robot.h"
 
 class game {
-    
 public:
+    //constructor
     explicit game();
-    
-    //TEST PURPOSES ONLY
-    void add_robot(std::string name);
-    void print_all() const;
-    
+    //returns the number of robots in the map
     int num_robots() const;
+    //moves a robot specified by name
     void move(const std::string &name, int dir);
+    //returns the number of robots within 10 steps of the origin
     int num_close() const;
+    //returns the furthest distance from the origin of all the robots
     int max_distance() const;
+    //returns the name of the robot with the furthest distance from the origin
     std::string furthest() const;
-    
+    //returns a vector of robots sorted in ascending order by distance travelled
     std::vector<robot> robots_by_travelled() const;
-
-    
-    
 };
 
 #endif /* game_h */

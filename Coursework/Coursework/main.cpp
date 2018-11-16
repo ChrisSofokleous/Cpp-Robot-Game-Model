@@ -15,7 +15,6 @@ using namespace std;
 
 int main() {
     game g;
-    g.add_robot("dave");
     
     g.move("dave", 3);
     g.move("fred", 1);
@@ -36,7 +35,7 @@ int main() {
     
   
     
-    g.print_all();
+
     
     cout << "num close: " << g.num_close() << "\n";
     cout << "max distance: " << g.max_distance() << "\n";

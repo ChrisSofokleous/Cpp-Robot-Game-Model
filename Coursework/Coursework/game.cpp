@@ -12,39 +12,23 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-
 #include <iostream>
 
 using namespace std;
 
-// created a map to be populated with robots
+// creates a map to be populated with robots
 map<const string,robot> robots;
 
 // constructor
 game::game(){};
-
-//TEST PURPOSES ONLY
-void game::add_robot(string name) {
-    robots.insert(make_pair(name, robot(name)));
-}
-
-void game::print_all() const {
-    for (auto elem : robots)
-    {
-        cout << elem.first << "| " << "distance travelled: " << elem.second.travelled() <<
-        " | north: " << elem.second.north() << " | east: " << elem.second.east() << " | distance from origin: " << distance(elem.second) << '\n';
-    }
-    
-}
-
-
 
 //returns the number of robots in the map
 int game::num_robots() const {
     return (robots.size());
 }
 
-//moved the robot specified by its name in a direction set by the 'dir' variable
+//moves the robot specified by its name in a direction set by the 'dir' variable
+//if no robot is found with name, a new robot is created, and then moved
 void game::move(const string &name, int dir){
     if (robots.count(name) != 0) {
         if (dir == 0) {
@@ -68,6 +52,7 @@ void game::move(const string &name, int dir){
     }
 }
 
+//returns the number of robots within 10 steps of the origin
 int game::num_close() const {
     int count = 0;
     for (auto elem : robots){
@@ -80,6 +65,7 @@ int game::num_close() const {
     return count;
 }
 
+//returns the furthest distance from the origin of any robot in the map
 int game::max_distance() const {
     int furthest = 0;
     for (auto elem : robots){
@@ -90,6 +76,7 @@ int game::max_distance() const {
     return furthest;
 }
 
+//returns the name of the robot furthest away from the origin
 string game::furthest() const {
     int furthest = 0;
     string name;
@@ -102,23 +89,12 @@ string game::furthest() const {
     return name;
 }
 
+//returns a vector of robots sorted in ascended order by distance travelled
 vector<robot> game::robots_by_travelled() const {
     vector<robot> robots_vec;
     for (auto elem : robots){
         robots_vec.push_back(elem.second);
     }
-    //robots_vec.reserve(robots.size());
-    
     sort(robots_vec.begin(), robots_vec.end());
     return robots_vec;
-    
-    
-    //cout << "vector is populated\n";
-    //sort(robots_vec.begin(), robots_vec.end(), compareRobot);
-
-    
-   //return robots_vec;
-  
 }
-
-             
