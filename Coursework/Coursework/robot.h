@@ -22,6 +22,9 @@ class robot {
     int travelledDist = 0;
     
 public:
+    bool operator< (const robot &other) const {
+        return travelled() < other.travelled();
+    }
     explicit robot(const std::string &n);
     void move_north();
     void move_south();

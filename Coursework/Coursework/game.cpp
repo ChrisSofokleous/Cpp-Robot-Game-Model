@@ -109,17 +109,21 @@ string game::furthest() const {
 
 vector<robot> game::robots_by_travelled() const {
     vector<robot> robots_vec;
-    //robots_vec.reserve(robots.size());
-    
     for (auto elem : robots){
         robots_vec.push_back(elem.second);
-        }
+    }
+    //robots_vec.reserve(robots.size());
     
-    cout << "vector is populated\n";
-    sort(robots_vec.begin(), robots_vec.end(), compareRobot);
+    vector<robot> robots_vect_copy = robots_vec;
+    std::sort(robots_vect_copy.begin(), robots_vect_copy.end());
+    return robots_vect_copy;
+    
+    
+    //cout << "vector is populated\n";
+    //sort(robots_vec.begin(), robots_vec.end(), compareRobot);
 
     
-   return robots_vec;
+   //return robots_vec;
   
 }
 
