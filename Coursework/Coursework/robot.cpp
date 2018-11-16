@@ -12,13 +12,7 @@
 
 using namespace std;
 
-const int originX = 0;
-const int originY = 0;
 
-int posX = originX;
-int posY = originY;
-
-int travelledDist = 0;
 
 robot::robot(const string &n) : n(n) {
 };

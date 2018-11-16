@@ -8,25 +8,48 @@
 
 #include <iostream>
 #include "robot.h"
+#include "game.h"
+
 
 using namespace std;
 
 int main() {
-    robot r("Dave");
+    game g;
+    g.add_robot("dave");
     
-    r.move_north();
-    r.move_north();
-    r.move_north();
-    r.move_east();
-    r.move_south();
+    g.move("dave", 3);
+    g.move("fred", 1);
+    g.move("dave", 0);
+    g.move("sarah", 2);
+    g.move("sarah", 2);
+    g.move("sarah", 2);
+    g.move("sarah", 2);
+    g.move("sarah", 2);
+    g.move("sarah", 2);
+    g.move("sarah", 2);
+    g.move("sarah", 2);
+    g.move("sarah", 2);
+    g.move("sarah", 2);
+    g.move("sarah", 2);
     
-    cout << "Name: " << r.name() << "\n";
-    cout << "N: " << r.north() << "\n";
-    cout << "E: " << r.east() << "\n";
-    cout << "Trav: " << r.travelled() << "\n";
-    cout << "Dist: " << distance(r) << "\n";
     
-    return 0;
+    
+  
+    
+    g.print_all();
+    
+    cout << "num close: " << g.num_close() << "\n";
+    cout << "max distance: " << g.max_distance() << "\n";
+    cout << "furthest: " << g.furthest() << "\n";
+    
+    vector<robot> rob_vec = g.robots_by_travelled();
+    
+    
+    
+    //for (auto i = rob_vec.begin(); i != rob_vec.end();++i) {
+        //cout << rob_vec. << '\n';
+        
+    //}
 }
 
 

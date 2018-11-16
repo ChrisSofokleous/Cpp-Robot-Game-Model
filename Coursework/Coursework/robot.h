@@ -13,6 +13,13 @@
 class robot {
     
     std::string n;
+    const int originX = 0;
+    const int originY = 0;
+    
+    int posX = originX;
+    int posY = originY;
+    
+    int travelledDist = 0;
     
 public:
     explicit robot(const std::string &n);
