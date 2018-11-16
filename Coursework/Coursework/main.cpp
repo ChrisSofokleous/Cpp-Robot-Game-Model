@@ -42,9 +42,11 @@ int main() {
     cout << "max distance: " << g.max_distance() << "\n";
     cout << "furthest: " << g.furthest() << "\n";
     
-    vector<robot> rob_vec = g.robots_by_travelled();
+    g.robots_by_travelled();
     
-    
+    for (auto i = g.robots_by_travelled().begin(); i != g.robots_by_travelled().end(); ++i){
+        cout << i->name() << '\n';
+    }
     
     //for (auto i = rob_vec.begin(); i != rob_vec.end();++i) {
         //cout << rob_vec. << '\n';

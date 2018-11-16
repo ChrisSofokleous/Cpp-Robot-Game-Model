@@ -9,12 +9,13 @@
 #ifndef robot_h
 #define robot_h
 #include <string>
+#include <algorithm>
 
 class robot {
     
     std::string n;
-    const int originX = 0;
-    const int originY = 0;
+    int originX = 0;
+    int originY = 0;
     
     int posX = originX;
     int posY = originY;

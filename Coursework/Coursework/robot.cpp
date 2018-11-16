@@ -9,6 +9,7 @@
 #include "robot.h"
 #include <string>
 #include <cstdlib>
+#include <algorithm>
 
 using namespace std;
 

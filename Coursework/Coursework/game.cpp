@@ -102,11 +102,6 @@ string game::furthest() const {
     return name;
 }
 
-
-    bool compareRobot(robot i, robot j){
-        return (i.travelled() < j.travelled());
-    }
-
 vector<robot> game::robots_by_travelled() const {
     vector<robot> robots_vec;
     for (auto elem : robots){
@@ -114,9 +109,8 @@ vector<robot> game::robots_by_travelled() const {
     }
     //robots_vec.reserve(robots.size());
     
-    vector<robot> robots_vect_copy = robots_vec;
-    std::sort(robots_vect_copy.begin(), robots_vect_copy.end());
-    return robots_vect_copy;
+    sort(robots_vec.begin(), robots_vec.end());
+    return robots_vec;
     
     
     //cout << "vector is populated\n";
